@@ -1,18 +1,25 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom"
-import { HomePage } from "./pages/Home"
-import { ProductsPage } from "./pages/Products"
-import { ContactPage } from "./pages/Contact"
+import { Routes, Route, Link } from "react-router-dom";
+import Home from "./Pages/Home.jsx";
+import Products from "./Pages/Products.jsx";
+import Contact from "./Pages/Contact.jsx";
 
 const App = () => {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/produtos" element={<ProductsPage />} />
-        <Route path="/contato" element={<ContactPage />} />
-      </Routes>
-    </BrowserRouter>
-  )
+return (
+<>
+
+<nav className="flex gap-4 p-4 border-b">
+<Link to="/" className="hover:underline">Home</Link>
+<Link to="/Products" className="hover:underline">Produtos</Link>
+<Link to="/Contact" className="hover:underline">Contato</Link>
+</nav>
+
+<Routes>
+<Route path="/" element={<Home/>} />
+<Route path="/products" element={<Products/>} />
+<Route path="/contact" element={<Contact/>} />
+</Routes>
+</>
+);
 }
 
 export default App
