@@ -1,6 +1,10 @@
+import { Header } from "../../components/Header";
+
 export const Home = () => {
     return (
         <main className="bg-pink-200 min-h-screen">
+            <Header />
+
             <article className="lg:max-w-md mx-auto flex flex-col items-center text-center py-12 px-8">
                 <img src="./pagina1foto.png" alt="Foto principal do cupcake" className="lg:max-w-3xs mb-10" />
 
