@@ -7,8 +7,8 @@ export const Header = () => {
 
             <ul className="flex flex-col lg:flex-row font-extrabold text-3xl space-y-4  space-x-8">
                 <li><Link to="/">Home</Link></li>
-                <li><Link to="/">Produto</Link></li>
-                <li><Link to="/">Contato</Link></li>
+                <li><Link to="/products">Produto</Link></li>
+                <li><Link to="/contact">Contato</Link></li>
             </ul>
         </header>
     )
